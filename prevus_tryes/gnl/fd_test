@@ -1,0 +1,66 @@
+On no twenty spring of in esteem spirit likely estate. Continue new you declared differed learning bringin 
+
+Doubtful two bed way pleasure confined followed. Shew up ye away no eyes life or were this. Perfectly dide
+
+udden she seeing garret far regard. By hardly it direct if pretty up regret. Ability thought enquire settled
+
+Oh acceptance apartments up sympathize astonished delightful. Waiting him new lasting towards. Continuing merely
+
+Ought these are balls place mrs their times add she. Taken no great widow spoke of it small. Genius use except
+
+Forfeited you engrossed but gay sometimes explained. Another as studied it to evident. Merry sense given he bed
+
+Moments its musical age explain. But extremity sex now education concluded earnestly her continual. Oh furniture
+
+Did shy say mention enabled through elderly improve. As at so believe account evening behaved hearted is. House if
+
+Now eldest new tastes plenty mother called misery get. Longer excuse for county nor except met its things. Narrow 
+
+Respect forming clothes do in he. Course so piqued no an by appear. Themselves reasonable pianoforte so motion
+
+	test_line = ft_strdup("ceci est une phrase test \n bails cachee \n c'etais une trap");
+	line = ft_strdup("");
+	memory->str = ft_strdup(test_line);
+	memory->str_size = strlen(test_line);
+	check_str(memory);
+	f_print("line before = ", line, 1);
+	join(&line, memory);
+	f_print("line after  = ", line, 2);
+	f_print("    memory  = ", memory->str, 3);
+
+//	THIRD JOIN TEST ||			LIGNE VIDE + STR\N
+
+	test_line = ft_strdup("ceci est une phrase test");
+	line = ft_strdup("");
+	memory->str = ft_strdup(test_line);
+	memory->str_size = strlen(test_line);
+	check_str(memory);
+	f_print("line before = ", line, 1);
+	join(&line, memory);
+	f_print("line after  = ", line, 2);
+	f_print("    memory  = ", memory->str, 3);
+
+//	SECOND JOIN TEST ||			LIGNE NON-VIDE + STR \N
+
+	test_line = ft_strdup("ceci est une phrase test \n bails cachee \n c'etais une trap");
+	line = ft_strdup("Salut ceci est une ligne non vide ");
+	memory->str = ft_strdup(test_line);
+	memory->str_size = strlen(test_line);
+	check_str(memory);
+	f_print("line before = ", line, 1);
+	join(&line, memory);
+	f_print("line after  = ", line, 2);
+	f_print("    memory  = ", memory->str, 4);
+
+//	LAST TEST ||				LIGNE NON-VIDE + STR FULL
+
+	test_line = ft_strdup("ceci est une phrase test");
+	line = ft_strdup("Salut ceci est une ligne non vide ");
+	memory->str = ft_strdup(test_line);
+	memory->str_size = strlen(test_line);
+	check_str(memory);
+	f_print("line before = ", line, 1);
+	join(&line, memory);
+	f_print("line after  = ", line, 2);
+	f_print("    memory  = ", memory->str, 4);
+
